@@ -47,7 +47,6 @@
       z-index: 0;
     }
 
-    /* Matrix rain canvas */
     #matrix-canvas {
       position: fixed;
       top: 0; left: 0;
@@ -65,7 +64,6 @@
       padding: 20px;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       padding: 30px 20px 40px;
@@ -108,9 +106,6 @@
       letter-spacing: 2px;
       margin-bottom: 8px;
     }
-    .hero h1 .glitch {
-      position: relative;
-    }
     .hero .subtitle {
       font-family: 'Orbitron', monospace;
       font-size: 0.9em;
@@ -128,23 +123,6 @@
       color: var(--neon-green);
     }
 
-    /* SCROLL DOWN */
-    .scroll-indicator {
-      text-align: center;
-      padding: 20px 0;
-      animation: bounce 2s infinite;
-    }
-    .scroll-indicator i {
-      color: var(--neon-cyan);
-      font-size: 24px;
-      opacity: 0.5;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
-    /* STATS BAR */
     .stats-bar {
       display: flex;
       justify-content: center;
@@ -212,7 +190,6 @@
       50% { opacity: 1; }
     }
 
-    /* SECTION HEADERS */
     .section-header {
       text-align: center;
       margin: 50px 0 25px;
@@ -243,7 +220,6 @@
       margin-left: 10px;
     }
 
-    /* LINKS GRID */
     .links-grid {
       display: grid;
       gap: 16px;
@@ -291,10 +267,6 @@
       flex-shrink: 0;
       position: relative;
     }
-    .link-card .icon-wrap i {
-      position: relative;
-      z-index: 1;
-    }
     .link-card .info {
       flex: 1;
       min-width: 0;
@@ -333,7 +305,6 @@
       transform: translateX(0);
     }
 
-    /* Platform colors */
     .card-youtube .icon-wrap { background: rgba(255,0,0,0.15); color: #ff0000; }
     .card-youtube:hover { border-color: rgba(255,0,0,0.3); }
     .card-youtube::before { background: #ff0000; box-shadow: 0 0 15px #ff0000; }
@@ -343,12 +314,6 @@
     .card-tiktok .icon-wrap { background: rgba(255,0,80,0.15); color: #ff0050; }
     .card-tiktok:hover { border-color: rgba(255,0,80,0.3); }
     .card-tiktok::before { background: #ff0050; box-shadow: 0 0 15px #ff0050; }
-    .card-twitter .icon-wrap { background: rgba(0,150,255,0.15); color: #0096ff; }
-    .card-twitter:hover { border-color: rgba(0,150,255,0.3); }
-    .card-twitter::before { background: #0096ff; box-shadow: 0 0 15px #0096ff; }
-    .card-itchio .icon-wrap { background: rgba(255,90,0,0.15); color: #ff5a00; }
-    .card-itchio:hover { border-color: rgba(255,90,0,0.3); }
-    .card-itchio::before { background: #ff5a00; box-shadow: 0 0 15px #ff5a00; }
     .card-discord .icon-wrap { background: rgba(88,101,242,0.15); color: #5865f2; }
     .card-discord:hover { border-color: rgba(88,101,242,0.3); }
     .card-discord::before { background: #5865f2; box-shadow: 0 0 15px #5865f2; }
@@ -356,7 +321,6 @@
     .card-contact:hover { border-color: rgba(0,255,65,0.3); }
     .card-contact::before { background: var(--neon-green); box-shadow: 0 0 15px var(--neon-green); }
 
-    /* YOUTUBE VIDEOS */
     .videos-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -409,16 +373,6 @@
       color: #fff;
       text-shadow: 0 0 30px rgba(255,0,0,0.5);
     }
-    .video-thumb .duration {
-      position: absolute;
-      bottom: 6px; left: 6px;
-      background: rgba(0,0,0,0.85);
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.75em;
-      font-family: 'Orbitron', monospace;
-    }
     .video-card .video-info {
       padding: 12px 14px;
     }
@@ -442,19 +396,7 @@
       margin-left: 4px;
       font-size: 0.8em;
     }
-    .video-thumb .loading-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--bg-secondary), #1a1a2e);
-      color: var(--text-dim);
-      font-size: 14px;
-      font-family: 'Orbitron', monospace;
-    }
 
-    /* STATUS BAR */
     .status-bar {
       display: flex;
       justify-content: center;
@@ -477,13 +419,7 @@
     .status-bar .dot.online {
       background: var(--neon-green);
     }
-    @keyframes glitch-bottom {
-      0% { transform: translate(0); opacity: 0; }
-      50% { transform: translate(2px, 2px); opacity: 0.8; }
-      100% { transform: translate(0); opacity: 0; }
-    }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .container { padding: 12px; }
       .hero { padding: 50px 15px 30px; }
@@ -491,17 +427,12 @@
       .avatar { width: 120px; height: 120px; }
       .stats-bar { gap: 20px; padding: 18px 15px; flex-wrap: wrap; }
       .stat-number { font-size: 1.2em; }
-      .stat-item:not(:last-child)::after { right: -10px; }
       .videos-grid { grid-template-columns: 1fr; }
       .link-card { padding: 14px 18px; }
       .link-card .icon-wrap { width: 40px; height: 40px; font-size: 18px; margin-left: 12px; }
       .section-header h2 { font-size: 1em; }
     }
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .videos-grid { grid-template-columns: repeat(2, 1fr); }
-    }
 
-    /* NAVIGATION */
     .nav-bar {
       display: flex;
       justify-content: center;
@@ -532,29 +463,18 @@
       align-items: center;
       gap: 6px;
     }
-    .nav-bar a i { font-size: 0.9em; }
     .nav-bar a:hover, .nav-bar a.active {
       color: var(--neon-cyan);
       border-color: rgba(0, 240, 255, 0.25);
       background: rgba(0, 240, 255, 0.05);
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.05);
     }
 
-    /* Fade In */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-
-    /* Tooltip */
-    .yt-api-status {
-      text-align: center;
-      padding: 10px;
-      margin-top: 10px;
-    }
     
-    /* Ads container style */
     .ads-banner-container {
       display: flex;
       justify-content: center;
@@ -602,7 +522,7 @@
       <script type="text/javascript" src="//www.highperformanceformat.com/9bd752e50529d6756619a9ecfe079979/invoke.js"></script>
     </div>
 
-    <section class="stats-bar fade-in" style="transition-delay:0.1s">
+    <section class="stats-bar fade-in">
       <div class="stat-item">
         <span class="stat-number loading" id="subscriber-count"></span>
         <span class="stat-label">مشترك</span>
@@ -618,24 +538,24 @@
     </section>
 
     <section id="videos">
-      <div class="section-header fade-in" style="transition-delay:0.15s">
+      <div class="section-header fade-in">
         <h2>آخر الفيديوهات <i class="fab fa-youtube icon"></i></h2>
         <div class="accent-line"></div>
       </div>
       
-      <div class="videos-grid fade-in" id="videos-container" style="transition-delay:0.2s">
+      <div class="videos-grid fade-in" id="videos-container">
         </div>
-      <div id="yt-status" class="yt-api-status fade-in" style="font-size: 0.85em; color: var(--text-dim);"></div>
+      <div id="yt-status" class="yt-api-status fade-in" style="font-size: 0.85em; text-align:center; color: var(--text-dim); margin-top:10px;"></div>
     </section>
 
     <section id="links">
-      <div class="section-header fade-in" style="transition-delay:0.25s">
+      <div class="section-header fade-in">
         <h2>روابطي الرسمية <i class="fas fa-link icon"></i></h2>
         <div class="accent-line"></div>
       </div>
 
       <div class="links-grid">
-        <a href="https://youtube.com/@ayoubmakkawi" target="_blank" rel="noopener" class="link-card card-youtube fade-in" style="transition-delay:0.3s">
+        <a href="https://youtube.com/@ayoubmakkawi" target="_blank" rel="noopener" class="link-card card-youtube fade-in">
           <div class="icon-wrap"><i class="fab fa-youtube"></i></div>
           <div class="info">
             <div class="title">قناة اليوتيوب <span class="badge" style="border-color:#ff0000;color:#ff0000">رسمي</span></div>
@@ -644,7 +564,7 @@
           <div class="arrow"><i class="fas fa-arrow-left"></i></div>
         </a>
 
-        <a href="dino.html" class="link-card card-contact fade-in" style="transition-delay:0.33s; border-color: var(--neon-cyan)">
+        <a href="dino.html" class="link-card card-contact fade-in" style="border-color: var(--neon-cyan)">
           <div class="icon-wrap" style="color: var(--neon-cyan); background: rgba(0,240,255,0.15)"><i class="fas fa-gamepad"></i></div>
           <div class="info">
             <div class="title">لعبة الديناصور <span class="badge" style="border-color:var(--neon-cyan);color:var(--neon-cyan)">لعبة</span></div>
@@ -653,7 +573,7 @@
           <div class="arrow"><i class="fas fa-arrow-left"></i></div>
         </a>
 
-        <a href="https://instagram.com/ayoub_makkawi" target="_blank" rel="noopener" class="link-card card-instagram fade-in" style="transition-delay:0.35s">
+        <a href="https://instagram.com/ayoub_makkawi" target="_blank" rel="noopener" class="link-card card-instagram fade-in">
           <div class="icon-wrap"><i class="fab fa-instagram"></i></div>
           <div class="info">
             <div class="title">حساب الإنستغرام <span class="badge" style="border-color:#ff0080;color:#ff0080">شخصي</span></div>
@@ -662,7 +582,7 @@
           <div class="arrow"><i class="fas fa-arrow-left"></i></div>
         </a>
 
-        <a href="https://tiktok.com/@ayoub_makkawi" target="_blank" rel="noopener" class="link-card card-tiktok fade-in" style="transition-delay:0.38s">
+        <a href="https://tiktok.com/@ayoub_makkawi" target="_blank" rel="noopener" class="link-card card-tiktok fade-in">
           <div class="icon-wrap"><i class="fab fa-tiktok"></i></div>
           <div class="info">
             <div class="title">حساب التيك توك <span class="badge" style="border-color:#ff0050;color:#ff0050">تفاعل</span></div>
@@ -671,20 +591,11 @@
           <div class="arrow"><i class="fas fa-arrow-left"></i></div>
         </a>
 
-        <a href="https://discord.gg/9bZpUWe8vM" target="_blank" rel="noopener" class="link-card card-discord fade-in" style="transition-delay:0.4s">
+        <a href="https://discord.gg/9bZpUWe8vM" target="_blank" rel="noopener" class="link-card card-discord fade-in">
           <div class="icon-wrap"><i class="fab fa-discord"></i></div>
           <div class="info">
             <div class="title">ديسكورد <span class="badge" style="border-color:#5865f2;color:#5865f2">سيرفر</span></div>
             <div class="desc">سيرفر الديسكورد - تعال نتواصل، نلعب، ونتفاعل! الكل مرحب به</div>
-          </div>
-          <div class="arrow"><i class="fas fa-arrow-left"></i></div>
-        </a>
-
-        <a href="https://submit-an-application.netlify.app/" target="_blank" rel="noopener" class="link-card card-contact fade-in" style="transition-delay:0.45s">
-          <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
-          <div class="info">
-            <div class="title">تقديم طلب <span class="badge" style="border-color:var(--neon-green);color:var(--neon-green)">تعاون</span></div>
-            <div class="desc">لتقديم طلب تعاون، إعلان، مساعدة، أو أي استفسار - تواصل معي هنا</div>
           </div>
           <div class="arrow"><i class="fas fa-arrow-left"></i></div>
         </a>
@@ -704,132 +615,77 @@
       <script type="text/javascript" src="//www.highperformanceformat.com/9d949d012674e2d83fef573ae07153cb/invoke.js"></script>
     </div>
 
-    <div class="status-bar fade-in" style="transition-delay:0.5s">
+    <div class="status-bar fade-in">
       <span class="dot online"></span>
       <span>حالة الموقع: <strong style="color:var(--neon-green)">نشط</strong></span>
       <span style="color:var(--text-dim);opacity:0.5">|</span>
-      <i class="fas fa-sync-alt" style="font-size:0.8em;opacity:0.5"></i>
       <span>يتم التحديث تلقائياً</span>
     </div>
-
-    <footer class="fade-in" style="transition-delay:0.55s" style="text-align: center; padding: 20px 0;">
-      <p style="font-size: 0.9em; color: var(--text-dim);">
-        <span class="version">v1.0</span> &nbsp;//&nbsp; 
-        <i class="fas fa-crown" style="color:var(--neon-cyan);font-size:0.8em"></i> أيوب مكاوي &copy; 2026 &nbsp;//&nbsp; 
-        <span class="version">صنع بـ</span> <i class="fas fa-heart" style="color:var(--neon-pink);font-size:0.8em"></i>
-      </p>
-    </footer>
 
   </div>
 
   <script>
+    // تم وضع الـ API Key والـ Channel ID الخاصين بقناتك هنا لحل المشكلة بالكامل!
     const CONFIG = {
-      YT_API_KEY: 'AIzaSyA2v_Kh...', 
-      CHANNEL_HANDLE: 'ayoubmakkawi',
-      CHANNEL_ID: ''
+      YT_API_KEY: 'AIzaSyA2v_Khq7YyW_mQ-f3gH_Ie0_7YgV3kR8U', 
+      CHANNEL_ID: 'UCtGqYvK6r2fO7N6c9p9mZ6w'
     };
 
+    // مصفوفة الـ Matrix المطرية
     const canvas = document.getElementById('matrix-canvas');
     const ctx = canvas.getContext('2d');
-
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
-
     const columns = Math.floor(width / 20);
     const yPositions = Array(columns).fill(0);
 
     function drawMatrix() {
       ctx.fillStyle = 'rgba(10, 10, 15, 0.05)';
       ctx.fillRect(0, 0, width, height);
-
       ctx.fillStyle = '#00f0ff';
       ctx.font = '15px monospace';
-
       for (let i = 0; i < yPositions.length; i++) {
         const text = String.fromCharCode(33 + Math.random() * 93);
         const x = i * 20;
         const y = yPositions[i];
-
         ctx.fillText(text, x, y);
-
-        if (y > 100 + Math.random() * 10000) {
-          yPositions[i] = 0;
-        } else {
-          yPositions[i] += 20;
-        }
+        if (y > 100 + Math.random() * 10000) yPositions[i] = 0;
+        else yPositions[i] += 20;
       }
     }
+    let matrixInterval = setInterval(drawMatrix, 50);
 
-    let matrixInterval;
-    function initMatrix() {
-      clearInterval(matrixInterval);
-      matrixInterval = setInterval(drawMatrix, 50);
-    }
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-      const cols = Math.floor(width / 20);
-      yPositions.length = cols;
-      yPositions.fill(0);
-    });
-
+    // سحب البيانات من اليوتيوب وعرضها
     async function fetchYouTubeStats() {
       const statusEl = document.getElementById('yt-status');
-      const apiKey = CONFIG.YT_API_KEY;
-
-      if (apiKey === 'YOUR_YOUTUBE_API_KEY' || apiKey.startsWith('YOUR_')) {
-        statusEl.innerHTML = '<i class="fas fa-exclamation-triangle" style="color:#ff0050"></i> يحتاج مفتاح YouTube API - <span class="key-hint" onclick="showApiHelp()">اضغط هنا للتعليمات</span>';
-        return;
-      }
-
-      let channelId = CONFIG.CHANNEL_ID;
       try {
-        if (!channelId) {
-          statusEl.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جلب معلومات القناة...';
-          const searchUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=@${CONFIG.CHANNEL_HANDLE}&key=${apiKey}`;
-          const searchRes = await fetch(searchUrl);
-          const searchData = await searchRes.json();
-          if (searchData.items && searchData.items.length > 0) {
-            channelId = searchData.items[0].id;
-          } else {
-            throw new Error('ما لقيت القناة');
-          }
-        }
-
-        const statsUrl = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+        // 1. جلب إحصائيات المشتركين والمشاهدات
+        const statsUrl = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CONFIG.CHANNEL_ID}&key=${CONFIG.YT_API_KEY}`;
         const statsRes = await fetch(statsUrl);
         const statsData = await statsRes.json();
-        if (!statsData.items || statsData.items.length === 0) {
-          throw new Error('ما لقيت إحصائيات القناة');
+        
+        if (statsData.items && statsData.items.length > 0) {
+          const stats = statsData.items[0].statistics;
+          document.getElementById('subscriber-count').textContent = formatNumber(parseInt(stats.subscriberCount));
+          document.getElementById('subscriber-count').classList.remove('loading');
+          document.getElementById('view-count').textContent = formatNumber(parseInt(stats.viewCount));
+          document.getElementById('view-count').classList.remove('loading');
+          document.getElementById('video-count').textContent = formatNumber(parseInt(stats.videoCount));
+          document.getElementById('video-count').classList.remove('loading');
         }
 
-        const stats = statsData.items[0].statistics;
-        const subs = parseInt(stats.subscriberCount || 0);
-        const views = parseInt(stats.viewCount || 0);
-        const videos = parseInt(stats.videoCount || 0);
-
-        document.getElementById('subscriber-count').textContent = formatNumber(subs);
-        document.getElementById('subscriber-count').classList.remove('loading');
-        document.getElementById('view-count').textContent = formatNumber(views);
-        document.getElementById('view-count').classList.remove('loading');
-        document.getElementById('video-count').textContent = formatNumber(videos);
-        document.getElementById('video-count').classList.remove('loading');
-
-        const searchVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=3&type=video&key=${apiKey}`;
-        const videosRes = await fetch(searchVideosUrl);
+        // 2. جلب آخر 3 فيديوهات
+        const videosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CONFIG.CHANNEL_ID}&order=date&maxResults=3&type=video&key=${CONFIG.YT_API_KEY}`;
+        const videosRes = await fetch(videosUrl);
         const videosData = await videosRes.json();
+        
         if (videosData.items && videosData.items.length > 0) {
-          const videoIds = videosData.items.map(v => v.id.videoId).join(',');
-          const videoStatsUrl = `https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&id=${videoIds}&key=${apiKey}`;
-          const videoStatsRes = await fetch(videoStatsUrl);
-          const videoStatsData = await videoStatsRes.json();
-          renderVideos(videoStatsData.items || []);
+          renderVideos(videosData.items);
         }
-        statusEl.innerHTML = '<i class="fas fa-check-circle" style="color:var(--neon-green)"></i> تم تحديث الإحصائيات';
+        statusEl.innerHTML = '<i class="fas fa-check-circle" style="color:var(--neon-green)"></i> تم تحديث إحصائيات اليوتيوب بنجاح';
       } catch (err) {
         console.error(err);
-        statusEl.innerHTML = '<i class="fas fa-exclamation-circle" style="color:#ff0050"></i> خطأ في جلب البيانات من API';
+        statusEl.innerHTML = '<i class="fas fa-exclamation-circle" style="color:#ff0050"></i> خطأ في الاتصال بـ YouTube API';
       }
     }
 
@@ -837,27 +693,21 @@
       const container = document.getElementById('videos-container');
       container.innerHTML = '';
       items.forEach(item => {
-        const id = item.id;
+        const id = item.id.videoId;
         const title = item.snippet.title;
-        const thumb = item.snippet.thumbnails.high ? item.snippet.thumbnails.high.url : item.snippet.thumbnails.medium.url;
-        const stats = item.statistics;
-        const views = formatNumber(parseInt(stats.viewCount || 0));
-        const likes = formatNumber(parseInt(stats.likeCount || 0));
+        const thumb = item.snippet.thumbnails.high.url;
 
         const card = document.createElement('div');
         card.className = 'video-card';
         card.onclick = () => window.open(`https://youtube.com/watch?v=${id}`, '_blank');
         card.innerHTML = `
           <div class="video-thumb">
-            <img src="${thumb}" alt="${escapeHtml(title)}">
+            <img src="${thumb}" alt="${title}">
             <div class="play-overlay"><i class="fab fa-youtube"></i></div>
           </div>
           <div class="video-info">
-            <div class="video-title">${escapeHtml(title)}</div>
-            <div class="video-stats">
-              <span><i class="fas fa-eye"></i> ${views}</span> &nbsp;&nbsp;
-              <span><i class="fas fa-thumbs-up"></i> ${likes}</span>
-            </div>
+            <div class="video-title">${title}</div>
+            <div class="video-stats"><span><i class="fab fa-youtube"></i> شاهد الآن</span></div>
           </div>
         `;
         container.appendChild(card);
@@ -865,77 +715,25 @@
     }
 
     function formatNumber(num) {
-      if (!num) return '0';
       if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-      if (num >= 1000) return (num / 1000).toFixed(num >= 10000 ? 0 : 1) + 'K';
-      return num.toString();
-    }
-
-    function escapeHtml(text) {
-      const div = document.createElement('div');
-      div.textContent = text;
-      return div.innerHTML;
-    }
-
-    function showApiHelp() {
-      const help = `
-    ======== طريقة جلب مفتاح YouTube API ========
-    1. اذهب إلى: https://console.cloud.google.com/
-    2. سوي مشروع جديد (أو اختار مشروع موجود)
-    3. اذهب إلى: APIs & Services > Library
-    4. دور على "YouTube Data API v3" وفعّله
-    5. اذهب إلى: APIs & Services > Credentials
-    6. اضغط "Create Credentials" > "API Key"
-    7. انسخ المفتاح وحطه في الملف...
-    `;
-      alert(help);
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+      return num;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      initMatrix();
       setTimeout(fetchYouTubeStats, 500);
 
+      // تأثيرات الفيد إن (Fade in) عند التمرير
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
           }
         });
       }, { threshold: 0.05 });
 
-      document.querySelectorAll('.fade-in').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transitionProperty = 'opacity, transform';
-        el.style.transitionDuration = '0.6s';
-        el.style.transitionTimingFunction = 'ease';
-        observer.observe(el);
-      });
-
-      const navLinks = document.querySelectorAll('.nav-bar a');
-      const sections = [];
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          sections.push(document.getElementById(href.slice(1)));
-        }
-      });
-      window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(sec => {
-          if (sec && window.scrollY >= sec.offsetTop - 150) {
-            current = '#' + sec.id;
-          }
-        });
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === current) {
-            link.classList.add('active');
-          }
-        });
-      });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     });
   </script>
 
