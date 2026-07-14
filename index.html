@@ -623,12 +623,99 @@
       border-bottom: 1px dashed var(--neon-purple);
     }
     .ads-banner-container {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-      min-height: 60px;
-      overflow: hidden;
+      display: block;
+      text-align: center;
+      margin: 25px auto;
+      padding: 15px;
+      background: rgba(15, 15, 30, 0.85);
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 800px;
+      min-height: 80px;
+      position: relative;
+      z-index: 2;
     }
+    .ads-banner-container iframe {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      border-radius: 10px;
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.95em;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      direction: rtl;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--text-dim);
+    }
+    .contact-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--neon-cyan);
+      font-size: 0.85em;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .contact-form .field { margin-bottom: 18px; }
+    .contact-form .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-family: 'Orbitron', monospace;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .contact-form .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--glow-cyan);
+    }
+    .contact-form .submit-btn:active {
+      transform: translateY(0);
+    }
+    .form-success {
+      text-align: center;
+      padding: 30px;
+      color: var(--neon-green);
+      font-size: 1.1em;
+      display: none;
+    }
+    .form-success i { font-size: 2.5em; display: block; margin-bottom: 12px; }
   </style>
   <script type='text/javascript' src='https://pl25926501.highperformancegate.com/83/87/11/8387114250005a305e55b4bc703565ff.js'></script>
 </head>
@@ -643,6 +730,7 @@
     <a href="#videos"><i class="fas fa-video"></i> فيديوهات</a>
     <a href="#social"><i class="fas fa-globe"></i> سوشل ميديا</a>
     <a href="#gaming"><i class="fas fa-gamepad"></i> ألعاب</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> تواصل</a>
     <a href="dino.html"><i class="fas fa-dragon"></i> لعبة</a>
   </nav>
 
@@ -661,7 +749,7 @@
   </section>
 
   <!-- ADS BANNER 468x60 -->
-  <div class="ads-banner-container" style="text-align:center;margin:10px auto;padding:10px 0;min-height:60px;width:100%;max-width:468px;margin-left:auto;margin-right:auto;">
+  <div class="ads-banner-container">
     <script type="text/javascript">
       atOptions = {
         'key' : '9bd752e50529d6756619a9ecfe079979',
@@ -809,7 +897,7 @@
   </div>
 
   <!-- ADS BANNER 728x90 -->
-  <div class="ads-banner-container" style="text-align:center;margin:20px auto;padding:10px 0;min-height:90px;width:100%;max-width:728px;margin-left:auto;margin-right:auto;">
+  <div class="ads-banner-container">
     <script type="text/javascript">
       atOptions = {
         'key' : '9d949d012674e2d83fef573ae07153cb',
@@ -821,6 +909,35 @@
     </script>
     <script type="text/javascript" src="https://www.highperformanceformat.com/9d949d012674e2d83fef573ae07153cb/invoke.js"></script>
   </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="fade-in" style="transition-delay:0.45s">
+    <div class="section-header">
+      <h2><span class="icon"><i class="fas fa-envelope"></i></span>تواصل معي</h2>
+      <div class="accent-line"></div>
+    </div>
+    <div class="contact-form" id="contact-form">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="field">
+          <label><i class="fas fa-user"></i> الاسم</label>
+          <input type="text" name="name" placeholder="اسمك هنا..." required>
+        </div>
+        <div class="field">
+          <label><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+          <input type="email" name="email" placeholder="email@example.com" required>
+        </div>
+        <div class="field">
+          <label><i class="fas fa-comment-dots"></i> الرسالة</label>
+          <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i>إرسال</button>
+      </form>
+      <div class="form-success" id="form-success">
+        <i class="fas fa-check-circle"></i>
+        تم إرسال رسالتك بنجاح! شكراً لتواصلك
+      </div>
+    </div>
+  </section>
 
   <!-- STATUS BAR -->
   <div class="status-bar fade-in" style="transition-delay:0.5s">
@@ -1071,6 +1188,40 @@ function showApiHelp() {
   `;
   alert(help);
 }
+
+// ============================================================
+// CONTACT FORM (Formspree AJAX)
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const formEl = form.querySelector('form');
+    const successEl = document.getElementById('form-success');
+    formEl.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = formEl.querySelector('.submit-btn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>جاري الإرسال...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(formEl.action, {
+          method: 'POST',
+          body: new FormData(formEl),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          formEl.style.display = 'none';
+          successEl.style.display = 'block';
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i>إرسال';
+        btn.disabled = false;
+        alert('حدث خطأ أثناء الإرسال. حاول مرة أخرى.');
+      }
+    });
+  }
+});
 
 // ============================================================
 // INIT
